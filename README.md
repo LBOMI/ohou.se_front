@@ -5,7 +5,9 @@
 * 본 프로젝트에서 사용한 사진 및 사용자 닉네임은  ‘오늘의 집’ 을 참고하여 학습 목적으로 임의로 설정한 것입니다.
 
 ### 📷 UI
-![image](https://github.com/user-attachments/assets/c4e4c8df-54fc-472b-825d-80c92ef307df)
+<img src="https://github.com/user-attachments/assets/c4e4c8df-54fc-472b-825d-80c92ef307df" style="width:500px"></img>
+
+
 
 ![of_2](https://github.com/user-attachments/assets/0301ff5b-3011-4c05-a0e3-ce8c9483c793)
 
