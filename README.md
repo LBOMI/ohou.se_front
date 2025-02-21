@@ -5,11 +5,11 @@
 * 본 프로젝트에서 사용한 사진 및 사용자 닉네임은  ‘오늘의 집’ 을 참고하여 학습 목적으로 임의로 설정한 것입니다.
 
 ### 📷 UI
-<img src="https://github.com/user-attachments/assets/c4e4c8df-54fc-472b-825d-80c92ef307df" style="width:500"></img>
+<img src="https://github.com/user-attachments/assets/c4e4c8df-54fc-472b-825d-80c92ef307df" style="width:400px"></img>
 
-<img src="https://github.com/user-attachments/assets/0301ff5b-3011-4c05-a0e3-ce8c9483c793" style="width:500"></img>
+<img src="https://github.com/user-attachments/assets/0301ff5b-3011-4c05-a0e3-ce8c9483c793" style="width:400px"></img>
 
-<img src="https://github.com/user-attachments/assets/b2e78345-47fe-457f-8a25-2ca83e83a71c" style="width:500"></img>
+<img src="https://github.com/user-attachments/assets/b2e78345-47fe-457f-8a25-2ca83e83a71c" style="width:500px"></img>
 
 <img src="https://github.com/user-attachments/assets/5aceee17-69be-4ae3-ba3c-bc85d35a29ac" style="width:500px"></img>
 
