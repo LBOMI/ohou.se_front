@@ -4,6 +4,21 @@
 * React를 활용해 '오늘의집' 플랫폼의 주요 기능을 재현한 클론 코딩 프로젝트입니다.
 * 본 프로젝트에서 사용한 사진 및 사용자 닉네임은  ‘오늘의 집’ 을 참고하여 학습 목적으로 임의로 설정한 것입니다.
 
+### 📷 UI
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/740647ff-12dd-47ca-a61a-5fedbc0f22f2/920c3ab1-a20c-43ad-828d-f4d57ef124e0/image.png)
+
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/740647ff-12dd-47ca-a61a-5fedbc0f22f2/30085559-525a-4ff7-8232-c499ff5cd12b/image.png)
+
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/740647ff-12dd-47ca-a61a-5fedbc0f22f2/5a2cd378-64db-40ed-9bb0-60ddb3d7f7f0/image.png)
+
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/740647ff-12dd-47ca-a61a-5fedbc0f22f2/324e22c4-1bf1-417c-b137-837e816ab33f/image.png)
+
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/740647ff-12dd-47ca-a61a-5fedbc0f22f2/d3f4924f-3f5b-4bc1-b854-5b5c57527333/image.png)
+
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/740647ff-12dd-47ca-a61a-5fedbc0f22f2/76df912a-ec70-4b83-bb26-604ef62600a8/image.png)
+
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/740647ff-12dd-47ca-a61a-5fedbc0f22f2/f971046c-e4fb-4e77-941c-c1b7e322c217/image.png)
+
 ### ✏️ 역할 및 기여
 * 본 프로젝트는 개인적으로 구현한 작업으로, 모든 과정을 독자적으로 수행하여 완성도를 높였습니다.
 
