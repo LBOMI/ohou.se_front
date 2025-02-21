@@ -7,19 +7,18 @@
 ### 📷 UI
 <img src="https://github.com/user-attachments/assets/c4e4c8df-54fc-472b-825d-80c92ef307df" style="width:500px"></img>
 
+<img src="https://github.com/user-attachments/assets/0301ff5b-3011-4c05-a0e3-ce8c9483c793" style="width:500px"></img>
 
+<img src="https://github.com/user-attachments/assets/b2e78345-47fe-457f-8a25-2ca83e83a71c" style="width:500px"></img>
 
-![of_2](https://github.com/user-attachments/assets/0301ff5b-3011-4c05-a0e3-ce8c9483c793)
+<img src="https://github.com/user-attachments/assets/5aceee17-69be-4ae3-ba3c-bc85d35a29ac" style="width:500px"></img>
 
-![of_3](https://github.com/user-attachments/assets/b2e78345-47fe-457f-8a25-2ca83e83a71c)
+<img src="https://github.com/user-attachments/assets/40b8308c-b4f1-415e-8b15-b03219133f44" style="width:500px"></img>
 
-![of_4](https://github.com/user-attachments/assets/5aceee17-69be-4ae3-ba3c-bc85d35a29ac)
+<img src="https://github.com/user-attachments/assets/cdb167e9-215c-4019-8c42-1e8295eaafe6" style="width:500px"></img>
 
-![of_5](https://github.com/user-attachments/assets/40b8308c-b4f1-415e-8b15-b03219133f44)
+<img src="https://github.com/user-attachments/assets/91529ec6-6e49-45d4-8b27-28f030a96fb5" style="width:500px"></img>
 
-![of_6](https://github.com/user-attachments/assets/cdb167e9-215c-4019-8c42-1e8295eaafe6)
-
-![of_7](https://github.com/user-attachments/assets/91529ec6-6e49-45d4-8b27-28f030a96fb5)
 
 ### ✏️ 역할 및 기여
 * 본 프로젝트는 개인적으로 구현한 작업으로, 모든 과정을 독자적으로 수행하여 완성도를 높였습니다.
