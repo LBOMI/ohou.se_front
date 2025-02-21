@@ -7,18 +7,17 @@
 ### 📷 UI
 ![image](https://github.com/user-attachments/assets/c4e4c8df-54fc-472b-825d-80c92ef307df)
 
+![of_2](https://github.com/user-attachments/assets/0301ff5b-3011-4c05-a0e3-ce8c9483c793)
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/740647ff-12dd-47ca-a61a-5fedbc0f22f2/30085559-525a-4ff7-8232-c499ff5cd12b/image.png)
+![of_3](https://github.com/user-attachments/assets/b2e78345-47fe-457f-8a25-2ca83e83a71c)
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/740647ff-12dd-47ca-a61a-5fedbc0f22f2/5a2cd378-64db-40ed-9bb0-60ddb3d7f7f0/image.png)
+![of_4](https://github.com/user-attachments/assets/5aceee17-69be-4ae3-ba3c-bc85d35a29ac)
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/740647ff-12dd-47ca-a61a-5fedbc0f22f2/324e22c4-1bf1-417c-b137-837e816ab33f/image.png)
+![of_5](https://github.com/user-attachments/assets/40b8308c-b4f1-415e-8b15-b03219133f44)
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/740647ff-12dd-47ca-a61a-5fedbc0f22f2/d3f4924f-3f5b-4bc1-b854-5b5c57527333/image.png)
+![of_6](https://github.com/user-attachments/assets/cdb167e9-215c-4019-8c42-1e8295eaafe6)
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/740647ff-12dd-47ca-a61a-5fedbc0f22f2/76df912a-ec70-4b83-bb26-604ef62600a8/image.png)
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/740647ff-12dd-47ca-a61a-5fedbc0f22f2/f971046c-e4fb-4e77-941c-c1b7e322c217/image.png)
+![of_7](https://github.com/user-attachments/assets/91529ec6-6e49-45d4-8b27-28f030a96fb5)
 
 ### ✏️ 역할 및 기여
 * 본 프로젝트는 개인적으로 구현한 작업으로, 모든 과정을 독자적으로 수행하여 완성도를 높였습니다.
