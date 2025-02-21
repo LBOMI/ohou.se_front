@@ -5,9 +5,9 @@
 * 본 프로젝트에서 사용한 사진 및 사용자 닉네임은  ‘오늘의 집’ 을 참고하여 학습 목적으로 임의로 설정한 것입니다.
 
 ### 📷 UI
-<img src="https://github.com/user-attachments/assets/c4e4c8df-54fc-472b-825d-80c92ef307df" style="width:400px"></img>
+<img src="https://github.com/user-attachments/assets/c4e4c8df-54fc-472b-825d-80c92ef307df" style="width:500px"></img>
 
-<img src="https://github.com/user-attachments/assets/0301ff5b-3011-4c05-a0e3-ce8c9483c793" style="width:400px"></img>
+<img src="https://github.com/user-attachments/assets/0301ff5b-3011-4c05-a0e3-ce8c9483c793" style="width:500px"></img>
 
 <img src="https://github.com/user-attachments/assets/b2e78345-47fe-457f-8a25-2ca83e83a71c" style="width:500px"></img>
 
@@ -15,9 +15,9 @@
 
 <img src="https://github.com/user-attachments/assets/40b8308c-b4f1-415e-8b15-b03219133f44" style="width:500px"></img>
 
-<img src="https://github.com/user-attachments/assets/cdb167e9-215c-4019-8c42-1e8295eaafe6" style="width:500px"></img>
+<img src="https://github.com/user-attachments/assets/cdb167e9-215c-4019-8c42-1e8295eaafe6" style="width:400px"></img>
 
-<img src="https://github.com/user-attachments/assets/91529ec6-6e49-45d4-8b27-28f030a96fb5" style="width:500px"></img>
+<img src="https://github.com/user-attachments/assets/91529ec6-6e49-45d4-8b27-28f030a96fb5" style="width:300px"></img>
 
 
 ### ✏️ 역할 및 기여
