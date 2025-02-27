@@ -81,10 +81,6 @@
     margin-right: 15px;
   }
 
-  .sticky-container_2_1_2 {
-    display: none;
-  }
-
   .sticky-container_2_1_4_2 {
     margin-right: 6px;
   }
@@ -355,9 +351,9 @@
     margin-left: 30px;
   }
 
-  .logo_N {
+  /* .logo_N {
     display: none;
-  }
+  } */
 
   .sticky-container_2_1_4_1 a,
   .sticky-container_2_1_4 span{
@@ -487,13 +483,13 @@
     transform: none; 
   }
 
-  .logo a {
+  /* .logo a {
     height: 30px; 
-  }
+  } */
 
-  .logo_N {
+  /* .logo_N {
     display: block;
-  }
+  } */
 
   .s-c_layout {
   top: 80px;
@@ -640,11 +636,11 @@ header {
   top: 0;
 }
 
-.sticky-container {
+/* .sticky-container {
  margin: auto;
-}
+} */
 
-.sticky-container_1 {
+/* .sticky-container_1 {
   position: fixed;
   z-index: 1200;
   transition: top 0.1s ease 0s;
@@ -652,12 +648,12 @@ header {
   width: 100%;
   background: #ffffff;
   border-bottom: 1px solid #EAEDEF;
-}
+} */
 
 
 
 
-.sticky-container_1-1 {
+/* .sticky-container_1-1 {
   width: 100%;
   position: relative;
   display: flex;
@@ -667,7 +663,7 @@ header {
   justify-content: space-between;
   box-sizing: border-box;
   line-height: 0;
-}
+} */
 
 .sticky-container_1-1_1 {
   /* flex: 1 1 auto; */
@@ -695,13 +691,13 @@ header {
   -webkit-font-smoothing: antialiased;
 }
 
-.logo {
+/* .logo {
   flex: 0 0 auto;
   color: #212629;
   margin-right: 20px;
-}
+} */
 
-.logo a {
+/* .logo a {
   border: none;
   background: none;
   font: inherit;
@@ -716,7 +712,7 @@ header {
   outline: none;
   cursor: pointer;
   touch-action: manipulation;
-}
+} */
 
 .logo_N {
   flex: 1 1 0px;
@@ -831,26 +827,7 @@ header {
 
 
 
-.sticky-container_2_1_2 button {
-  display: inline-block;
-  border: none;
-  background: none;
-  font: inherit;
-  padding: 6px;
-  margin: 3px 1px;
-  color: #2F3438;
-  line-height: 0;
-  outline: none;
-  cursor: pointer;
-  touch-action: manipulation;
-  -webkit-appearance: none;
-}
 
-.sticky-container_2_1_2 span {
-  display: inline-block;
-  font-size: 24px;
-  line-height: 1;
-}
 
 .sticky-container_2_1_3a {
   position: relative;
