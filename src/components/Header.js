@@ -14,7 +14,7 @@ function Header() {
 
     return (
       <header>
-        <StickyContainer style={{height: 80.75}}>
+        <StickyContainer>
           
            <StickyContainer_1>
             
@@ -108,7 +108,7 @@ function Header() {
     @media (min-width: 1256px) {
       height: 80px;
       padding-top: 10px;
-      padding-bottom: 10px;
+      // padding-bottom: 10px;
       max-width: 1256px;
       margin: 0 auto;
       padding: 0 60px;
@@ -117,16 +117,16 @@ function Header() {
     @media (max-width: 1256px) {
       height: 80px;
       padding-top: 10px;
-      padding-bottom: 10px;
+      // padding-bottom: 10px;
       max-width: 1256px;
       margin: 0 auto;
-      padding: 0 60px;
+      // padding: 0 60px;
     }
     
     @media (max-width: 1024px) {
       height: 80px;
       padding-top: 10px;
-      padding-bottom: 10px;
+      // padding-bottom: 10px;
       margin: 0 auto;
       padding: 0 60px;
     }
