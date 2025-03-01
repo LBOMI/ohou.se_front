@@ -11,8 +11,38 @@ export default function Navbar() {
   const [visibleItems, setVisibleItems] = useState([]);
   const [hiddenItems, setHiddenItems] = useState([]);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null); //드롭다운 외부 클릭하면 사라짐
 
-  useEffect(() => {
+  useEffect(() => { // ESC키를 누르면 드롭다운 닫힘
+    const handleKeyPress = (event) => {
+      if (event.key === "Escape") {
+        setIsDropdownOpen(false);
+      }
+    };
+
+    if (isDropdownOpen) {
+      document.addEventListener("keydown", handleKeyPress);
+    } else {
+      document.removeEventListener("keydown", handleKeyPress);
+    }
+
+    return () => document.removeEventListener("keydown", handleKeyPress);
+  }, [isDropdownOpen]);
+
+  const handelClickOutside = (event) => { // 드롭다운 외부 클릭하면 닫힘
+        if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+          setIsDropdownOpen(false);
+        }
+      };
+    
+    useEffect(() => {
+      document.addEventListener("mousedown", handelClickOutside);
+      return () => {
+        document.removeEventListener("mousedown", handelClickOutside);
+      };
+    }, []);
+
+  useEffect(() => { 
     const updateMenu = () => {
       const screenWidth = window.innerWidth;
       if (screenWidth < 2000) {
@@ -59,17 +89,17 @@ export default function Navbar() {
         
         {hiddenItems.length > 0 && (
           <Dropdown>
-            <DropdownButton onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
+            <DropdownButton ref={dropdownRef} onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
             <FontAwesomeIcon icon={faChevronDown} />
             </DropdownButton>
             
-            {isDropdownOpen && (
-              <DropdownContent>
+            {/* {isDropdownOpen && ( */}
+              <DropdownContent isOpen={isDropdownOpen}>
                 {hiddenItems.map((item) => (
                   <DropdownItem key={item}>{item}</DropdownItem>
                 ))}
               </DropdownContent>
-            )}
+            {/* )} */}
           </Dropdown>
         )}
       </MenuContainer>
@@ -160,16 +190,28 @@ const DropdownContent = styled.div`
   border-radius: 5px;
   overflow: hidden;
   z-index: 100;
+
+  /* 애니메이션 적용 */
+  opacity: ${(props) => (props.isOpen ? "1" : "0")};
+  transform: ${(props) => (props.isOpen ? "translateY(0px)" : "translateY(-10px)")};
+  visibility: ${(props) => (props.isOpen ? "visible" : "hidden")};
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, visibility 0.3s;
+  box-shadow: ${(props) => (props.isOpen ? "0 4px 10px rgba(0, 0, 0, 0.15)" : "none")}; // 드롭다운이 열릴 때 그림자 설정
+
 `;
+
+
 
 const DropdownItem = styled.a`
   display: block;
   padding: 10px 15px;
   color: black;
+  font-weight: 600;
   text-decoration: none;
   
   &:hover {
-    background: #f0f0f0;
+    color: #35C5F0;
+    // background: #f0f0f0;
   }
 `;
 
