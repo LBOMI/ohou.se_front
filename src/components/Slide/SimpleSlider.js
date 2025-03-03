@@ -67,10 +67,12 @@ function SimpleSlider() {
    position: relative;
    width: 100%;
    height: 100%;
+   border-radius: 10px;
   `
 
   const StyledSlider = styled(Slider)`
     position: absolute;
+    border-radius: 13px;
 
     top: 0;
     left: 10px;
@@ -80,6 +82,7 @@ function SimpleSlider() {
     .slick-list {
       width: 100%;
       height: 100%;
+      border-radius: 4px;
 
       img {
         width: 100%;
