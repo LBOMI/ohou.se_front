@@ -25,23 +25,26 @@ function BodyMain() {
 
             <AddSlide>
                 <SimpleSlider/>
-                </AddSlide>
+            </AddSlide>
             
-            <div className='B_main3'>
+            <MobileSlide>
                 <SimpleSlider2/>
-            </div>
+            </MobileSlide>
           </Container>
     )
 }
 
 const Container = styled.div`
-  max-width: 1256px;
+  max-width: 1230px;
   margin: 0 auto;
   padding: 0 60px;
   width: 100%;
+  height: 100%;
+
+
   box-sizing: border-box;
   display: flex;
-  align-items: stretch;
+  // align-items: stretch;
 
   
   @media (min-width: 1024px) {
@@ -54,7 +57,7 @@ const Container = styled.div`
 `
 
 const Mainbanner = styled.div`
-  flex: 1 1 847px;
+  flex: 3;
   
   section {
     overflow: hidden;
@@ -138,14 +141,20 @@ const User = styled.span`
 `
 
 const AddSlide = styled.div`
-  flex: 1 1 267px;
-//   display: flex;
-//   width: 100%;
-  max-height: 225px;
-//   justify-content: center;
-//   align-items: center;
+  flex: 1;
   
+  @media (max-width: 825px) {
+    display: none;
+  }
 `;
+
+const MobileSlide = styled.div`
+  width: 100%;
+  height: 100%;
+  @media (min-width: 825px) {
+    display: none;
+  }
+`
 
 
 export default BodyMain;
