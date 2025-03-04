@@ -6,6 +6,7 @@ import Exhibition_Slider from "./Slide/ExhibitionSlider";
 import Best_Slider from "./Slide/BestSlider";
 
 import BodyMain from "./BodyMain";
+import BodyNav from "./BodyNav";
 
 function Body() {
     const settings = {
@@ -19,71 +20,7 @@ function Body() {
       <section>
         <div className='B_mains'>
           <BodyMain/>
-          <div className='B_nav'>
-            <div className='B_nav_1'>
-              <div className='B_nav_2' >
-                <a >
-                  <img src='body_icon\오늘의집 아이콘1.avif'></img>
-                  <span>연말빅세일</span>
-                </a>
-              </div>
-              <div className='B_nav_2' >
-                <a >
-                  <img src='body_icon\오늘의딜.png'></img>
-                  <span>오늘의딜</span>
-                </a>
-              </div>
-              <div className='B_nav_2' >
-                <a >
-                  <img src='body_icon\집들이.avif'></img>
-                  <span>집들이</span>
-                </a>
-              </div>
-              <div className='B_nav_2' >
-                <a >
-                  <img src='body_icon\행운출첵.avif'></img>
-                  <span>행운출첵</span>
-                </a>
-              </div>
-              <div className='B_nav_2' >
-                <a >
-                  <img src='body_icon\살림살이.png'></img>
-                  <span>살림살이</span>
-                </a>
-              </div>
-              <div className='B_nav_2' >
-                <a >
-                  <img src='body_icon\취향의발견.png'></img>
-                  <span>취향의발견</span>
-                </a>
-              </div>
-              <div className='B_nav_2' >
-                <a >
-                  <img src='body_icon\오마트.png'></img>
-                  <span>오마트</span>
-                </a>
-              </div>
-              <div className='B_nav_2' >
-                <a >
-                  <img src='body_icon\빠른배송.png'></img>
-                  <span>빠른배송</span>
-                </a>
-              </div>
-              <div className='B_nav_2' >
-                <a >
-                  <img src='body_icon\리모델링.avif'></img>
-                  <span>리모델링</span>
-                </a>
-              </div>
-              <div className='B_nav_2' >
-                <a >
-                  <img src='body_icon\입주청소.avif'></img>
-                  <span>입주청소</span>
-                </a>
-              </div>
-            </div>
-            
-          </div>
+          <BodyNav/>
           <div className='B_lookfor'>
             <div className='B_lookfor_h'>
               <div className='B_lookfor_h1'>
