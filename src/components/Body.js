@@ -1,10 +1,11 @@
-import SimpleSlider from "./Slide/SimpleSlider";
-import SimpleSlider2 from "./Slide/SimpleSlider2";
+
 import LookforSlider from "./Slide/LookforSlider";
 import Categroy_Slider from "./Slide/CategorySlider";
 import Todaydeal_Slider from "./Slide/TodaydealSlider";
 import Exhibition_Slider from "./Slide/ExhibitionSlider";
 import Best_Slider from "./Slide/BestSlider";
+
+import BodyMain from "./BodyMain";
 
 function Body() {
     const settings = {
@@ -17,30 +18,7 @@ function Body() {
     return (
       <section>
         <div className='B_mains'>
-          <div className='B_main'>
-            <div className='B_main1'>
-              <section>
-                <a >
-                  <img className='B_main_section_a_img' src='오늘의집 main picture.avif'></img>
-                  
-                  <div className='B_main1_1'>
-                    
-                    <p className='B_main1_1_p'>아이 있는 집 맞나요? 모던함이 돋보이는 집</p>
-                    <span className='B_main1_1_s'>
-                      <img src='B_main\B_main_small.avif'></img>
-                      <span>오늘의집에디터</span>
-                    </span>
-                  </div>
-                </a>
-              </section>
-            </div>
-            <div className='B_main2'>
-                <SimpleSlider/>
-            </div>
-            <div className='B_main3'>
-                <SimpleSlider2/>
-            </div>
-          </div>
+          <BodyMain/>
           <div className='B_nav'>
             <div className='B_nav_1'>
               <div className='B_nav_2' >
