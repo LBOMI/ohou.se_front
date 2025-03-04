@@ -69,12 +69,12 @@ function BodyNav() {
 
 const Container = styled.div`
   max-width: 1256px; /*media 1256*/
-  padding: 0 60px; /*media 1256*/
+  padding: 30px 60px; /*media 1256*/
   width: 100%;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
-  margin: 30px 0 40px;
+  margin: 0 auto;
 `
 
 const Icon = styled.div`
