@@ -2,17 +2,17 @@ import styled from "styled-components";
 
 function Housewarming() {
     return (
-<div className='B_lookfor2'>
-            <div className='B_lookfor2_1h'>
-              <div className='B_lookfor2_1'>
-                <div className='B_lookfor2_1_1'>
+        <Container>
+            <Header>
+              <HeaderOne>
+                {/* <div className='B_lookfor2_1_1'> */}
                   <strong>이주의 집들이! 발굴하러 가볼까요?</strong>
-                </div>
-              </div>
+                {/* </div> */}
+              </HeaderOne>
               <div className='B_lookfor_h2'>
                 <button type='button'>더보기</button>
               </div>
-            </div>
+            </Header>
             <div className='B_lookfor2_2'>
               <div className='B_lookfor2_2_1'>
                 <div className='B_lookfor2_2_1_1'>
@@ -195,8 +195,52 @@ function Housewarming() {
                 </div>
               </div>
             </div>
-          </div>
+            </Container>
+
     )
 }
 
+const Container = styled.div`
+  width: 100%;
+  box-sizing: border-box;
+  background: rgb(255, 255, 255);
+  max-width: 1256px;
+  padding: 0px 60px;
+  margin: 25px auto;
+`
+
+const Header = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 0px;
+  font-size: 0px;
+  line-height: 1;
+`
+
+const HeaderOne = styled.div`
+  flex: 1 1 0%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  // min-width: 0px;
+  cursor: pointer;
+
+  strong {
+    overflow: hidden;
+    display: inline-block;
+    font-weight: 700;
+    color: rgb(47, 52, 56);
+    letter-spacing: -0.3px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 20px;
+    line-height: 28px;
+
+    &:hover {
+      color: rgb(136, 141, 144);
+    }
+  }
+`
 export default Housewarming;
