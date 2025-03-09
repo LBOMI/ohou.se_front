@@ -9,6 +9,7 @@ import BodyMain from "./BodyMain";
 import BodyNav from "./BodyNav";
 import BodyLookfor from "./Body/BodyLookfor";
 import Housewarming from "./Body/Housewarming";
+import Category from "./Body/Category";
 
 function Body() {
     const settings = {
@@ -25,24 +26,7 @@ function Body() {
           <BodyNav/>
           <BodyLookfor/>
           <Housewarming/>
-          <div className='Categroy_'>
-            <div className='Category_1h'>
-              <div className='Category_1h_1'>
-                <div className='Category_1h_1_1'>
-                  <strong>카테고리별 상품 찾기</strong>
-                </div>
-              </div>
-              <div className='Category_1h_2'></div>
-            </div>
-            <div className='Category_C'>
-              <div className='Category_C_1'>
-                <div className='Category_C_1_1'>
-                 <Categroy_Slider/>
-                </div>
-                
-              </div>
-            </div>
-          </div>
+          <Category/>
           <div className='Todaydeal'>
             <div className='Todaydeal_h'>
               <div className='Todaydeal_h_1'>
