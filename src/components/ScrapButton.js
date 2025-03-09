@@ -10,21 +10,17 @@ const ScrapButtonWrapper = styled.button`
   gap: 8px;
   padding: 8px;
   font-size: 16px;
-  color: ${({ isScrapped }) => (isScrapped ? '#ffcc00' : '#35C5F0')}; /* 색상 변경 */
+  color: ${({ isScrapped }) => (isScrapped ? '#35C5F0' : '#ffcc00')}; /* 색상 변경 */
   transition: color 0.3s ease;
-
-  &:hover {
-    color: ${({ isScrapped }) => (isScrapped ? '#e6b800' : '#444')};
-  }
 `;
 
 const ScrapIcon = styled.svg`
   width: 24px;
   height: 24px;
-  fill: ${({ isScrapped }) => (isScrapped ? '#FFFFFF' : '#35C5F0')};
-  fill-opacity: 0.7;
-  stroke: ${({ isScrapped }) => (isScrapped ? '#FFFFFF' : '#35C5F0')}; /* 색상 변경 */
-  stroke-width: 2;
+  fill: ${({ isScrapped }) => (isScrapped ? '#35C5F0' : '#FFFFFF')};
+  fill-opacity: 0.5;
+  stroke: ${({ isScrapped }) => (isScrapped ? '#35C5F0' : '#FFFFFF')}; /* 색상 변경 */
+  stroke-width: 1.2;
   transition: stroke 0.3s ease;
 `;
 
