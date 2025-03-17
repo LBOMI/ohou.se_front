@@ -1,97 +1,108 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faChevronRight} from '@fortawesome/free-solid-svg-icons'
 
+import styled from "styled-components";
+
 
 function Footer() {
     return (
-      <footer>
-        <div className='footer_1'>
-          <div className='footer_1_1'>
-            <div className='footer_1_1_1'>
+      <Background>
+        <Container>
+          <FirstSection>
+            <Header>
               <a>고객센터</a>
               <span><FontAwesomeIcon icon={faChevronRight} /></span>
-            </div>
-            <div className='footer_1_1_2'>
+            </Header>
+            <Number>
               <a>1670-0876</a>
               <time dateTime='09:00'>09:00</time>~
               <time dateTime='18:00'>18:00</time>
-            </div>
-            <div className='footer_1_1_3'>
-              <div className='footer_1_1_3_1'>평일: 전체 문의 상담</div>
-              <div className='footer_1_1_3_2'>토요일, 공휴일: 오늘의집 직접배송 주문건 상담</div>
-              <div className='footer_1_1_3_3'>일요일: 휴무</div>
-            </div>
-            <div className='footer_1_1_4'>
-              <button>카톡 상담(평일 09:00~18:00)</button>
-              <a>이메일 문의</a>
-            </div>
-          </div>
-          <div className='footer_1_2'></div>
-          <div className='footer_1_3'>
-            <a className='footer_1_3_a1'>회사소개</a>
-            <a className='footer_1_3_a2'>채용정보</a>
-            <a className='footer_1_3_a3'>이용약관</a>
-            <a className='footer_1_3_a4' style={{fontWeight:700}}>개인정보 처리방침</a>
-            <a className='footer_1_3_a5'>공지사항</a>
-            <a className='footer_1_3_a6'>안전거래센터</a>
-            <a className='footer_1_3_a7'>입점신청</a>
-            <a className='footer_1_3_a8'>제휴/광고 문의</a>
-            <a className='footer_1_3_a9'>시공파트너 안내</a>
-            <a className='footer_1_3_a10' style={{fontWeight:700}}>파트너 개인정보 처리방침</a>
-            <a className='footer_1_3_a11' >상품광고 소개</a>
-            <a className='footer_1_3_a12'>고객의 소리</a>
-          </div>
-          <div className='footer_1_4'></div>
-          <div className='footer_1_5'>
-            <div className='footer_1_5_1'>
-              <div className='footer_1_5_1_1'>
-                <div className='footer_1_5_1_1_1'>
-                  <span>|</span>(주)버킷플레이스
-                </div>
-                <div className='footer_1_5_1_1_2'>
+            </Number>
+            <Inquiry>
+              <span>평일: 전체 문의 상담</span><br/>
+              <span>토요일, 공휴일: 오늘의집 직접배송 주문건 상담</span><br/>
+              <span>일요일: 휴무</span>
+            </Inquiry>
+            <ContactButton>
+              <KaKaoTalkButton>카톡 상담(평일 09:00~18:00)</KaKaoTalkButton>
+              <EmailButton>이메일 문의</EmailButton>
+            </ContactButton>
+          </FirstSection>
+
+          <VerticalBar/>
+
+          <Option>
+            <span>회사소개</span>
+            <span>채용정보</span>
+            <span>이용약관</span>
+            <span style={{fontWeight:700}}>개인정보 처리방침</span>
+            <span>공지사항</span>
+            <span>안전거래센터</span>
+            <span>입점신청</span>
+            <span>제휴/광고 문의</span>
+            <span>시공파트너 안내</span>
+            <span style={{fontWeight:700}}>파트너 개인정보 처리방침</span>
+            <span>상품광고 소개</span>
+            <span>고객의 소리</span>
+          </Option>
+
+          <VerticalBar/>
+
+          <Details>
+            {/* <div className='footer_1_5_1'> */}
+              <CompanyInfo>
+                <Individual>
+                  {/* <span>|</span> */}
+                  (주)버킷플레이스
+                </Individual>
+                <Individual>
                   <span>|</span>대표이사 이승재
-                </div>
-                <div className='footer_1_5_1_1_3'>
-                  <span>|</span><address>서울 서초구 서초대로74길 4 삼성생명서초타워 25층, 27층</address>
-                </div>
-                <div className='footer_1_5_1_1_4'>
-                  <span>|</span><a>contact@bucketplace.net</a>
-                </div>
-                <div className='footer_1_5_1_1_5'>
-                  <span>|</span><span>사업자등록번호 119-86-91245</span>
-                  <a target='_blank'>사업자정보확인</a>
-                </div>
-                <div className='footer_1_5_1_1_6'>
-                  <span>|</span><span>통신판매업신고번호 제2018-서울서초-0580호</span>
-                </div>
-              </div>
-            </div>
-            <div className='footer_1_5_2'>
+                </Individual>
+                <Individual>
+                  <span>|</span>
+                  <address>서울 서초구 서초대로74길 4 삼성생명서초타워 25층, 27층</address>
+                </Individual>
+                <Individual>
+                  {/* <span>|</span> */}
+                  <a>contact@bucketplace.net</a>
+                </Individual>
+                <Individual>
+                  <span>|</span>
+                  <span>사업자등록번호 119-86-91245</span>
+                  <CheckBusinessInfo><a target='_blank'>사업자정보확인</a></CheckBusinessInfo>
+                </Individual>
+                <Individual>
+                  {/* <span>|</span> */}
+                  <span>통신판매업신고번호 제2018-서울서초-0580호</span>
+                </Individual>
+              </CompanyInfo>
+            {/* </div> */}
+            {/* <div className='footer_1_5_2'> */}
               <span>고객님이 현금결제한 금액에 대해 우리은행과 채무지급보증 계약을 체결하여 안전거래를 보장하고 있습니다.</span>
-              <a target='_blank'>서비스가입사실확인</a>
-            </div>
-            <div className='footer_1_5_3'>
-              <div className='footer_1_5_3_1'>
-                <img src='footer\footer_isms.png'></img>
-                <div className='footer_1_5_3_1_1'>
+              <ConfirmationOfService><a target='_blank'>서비스가입사실확인</a></ConfirmationOfService>
+            {/* </div> */}
+            <CertificationMark>
+              <IconBox>
+                <img src='footer\footer_isms.png'/>
+                <IsmsText>
                   <span>오늘의집 서비스 운영</span>
                   <br></br>
                   2024. 09. 08 ~ 2027. 09. 07
-                </div>
-              </div>
-              <div className='footer_1_5_3_2'>
-                <img src='footer\footer_iso27001 인증 마크.png'></img>
-              </div>
-              <div className='footer_1_5_3_3'>
+                </IsmsText>
+              </IconBox>
+              <IconBox>
+                <img src='footer\footer_iso27001 인증 마크.png'/>
+              </IconBox>
+              <IconBox>
                 <a target='_blank'>
-                  <img src='footer\footer_pcr 인증마크.png'></img>
+                  <img src='footer\footer_pcr 인증마크.png'/>
                 </a>
-              </div>
-            </div>
-            <div className='footer_1_5_4'>
+              </IconBox>
+            </CertificationMark>
+            <span>
             (주)버킷플레이스는 통신판매중개자로 거래 당사자가 아니므로, 판매자가 등록한 상품정보 및 거래 등에 대해 책임을 지지 않습니다. 단, (주)버킷플레이스가 판매자로 등록 판매한 상품은 판매자로서 책임을 부담합니다.
-            </div>
-            <div className='footer_1_5_5'>
+            </span>
+            <SNSIcon>
               <a>
                 <svg className='footer_1_5_5_s1' width={24} height={24} viewBox='0 0 24 24' fill='none'>
                   <circle cx={12} cy={12} r={11} fill='currentColor'></circle>
@@ -131,12 +142,326 @@ function Footer() {
                   <path d='M9.98281 16.9361H14.0161L11.9993 19.4181L9.98281 16.9361Z' fill='white'></path>
                 </svg>
               </a>
-            </div>
+            </SNSIcon>
             <p>Copyright 2014. bucketplace, Co., Ltd. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+          </Details>
+        </Container>
+      </Background>
     )
   }
+
+  const Background = styled.div`
+    margin-top: auto;
+    z-index: 100;
+    padding: 40px 0;
+    background-color: #F7F9FA;
+  `
+
+  const Container = styled.div`
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 12px;
+    line-height: 16px;
+    display: grid;
+    grid-column-gap: 24px;
+
+    @media (min-width: 1256px) {
+      max-width: 1256px;
+      margin: 0 auto; 
+      padding: 0 60px; 
+    }
+
+    @media (min-width: 1024px) {
+      grid-template-columns:256px 1px 256px 1px 2fr;;
+      grid-row-gap: 24px;
+    }
+
+    @media (max-width: 1024px) {
+      grid-template-columns: 1fr 1px 1fr;
+      grid-row-gap: 24px;
+    }
+
+    @media (min-width: 768px) {
+      padding: 0 40px; 
+    }
+  `;
+
+  const FirstSection = styled.div`
+    color: #2F3438;
+  `;
+
+  const Header = styled.div`
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    gap: 2px;
+
+    a {
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: 700;
+      display: flex;
+      -webkit-box-align: center;
+      align-items: center;
+      cursor: pointer;
+      touch-action: manipulation;
+      color: inherit;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    span {
+      display: inline-block;
+      font-size: 12px;
+      line-height: 1;
+    }
+  `;
+
+  const Number = styled.div`
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    margin: 20px 0 8px;
+
+    a {
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: 700;
+      white-space: nowrap;
+      margin-right: 6px;
+      cursor: pointer;
+      touch-action: manipulation;
+      color: inherit;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    time {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  `;
+
+  const Inquiry = styled.div`
+    font-size: 11px;
+    line-height: 20px;
+    white-space: pre-wrap;
+    margin-bottom: 12px;
+    padding-right: 10px; /*media 1256*/
+
+    span {
+      position: relative;
+      padding-left: 15px;
+
+      &::before {
+        content: '•';
+        position: absolute;
+        font-size: 10px;
+        left: 7px;
+      }
+    }
+  `;
+
+  const ContactButton = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+  `
+
+  const KaKaoTalkButton = styled.button`
+    margin: 0;
+    background: none;
+    font: inherit;
+    font-size: 14px;
+    line-height: 20px;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    height: 32px;
+    border-radius: 4px;
+    padding: 0 8px;
+    font-weight: 400;
+    box-sizing: border-box;
+    text-align: center;
+    color: #2F3438;
+    border: 1px solid #E6E6E6;
+    width: fit-content;
+    white-space: nowrap;
+    cursor: pointer;
+    touch-action: manipulation;
+  `;
+
+  const EmailButton = styled.button`
+    margin: 0;
+    background: none;
+    font: inherit;
+    font-size: 14px;
+    line-height: 20px;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    height: 32px;
+    border-radius: 4px;
+    padding: 0 8px;
+    font-weight: 400;
+    box-sizing: border-box;
+    text-align: center;
+    color: #2F3438;
+    border: 1px solid #E6E6E6;
+    width: fit-content;
+    white-space: nowrap;
+    cursor: pointer;
+    touch-action: manipulation;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  `;
+
+  const VerticalBar = styled.div`
+    width: 100%;
+    background-color: #EAEDEF;
+  `;
+
+  const Option = styled.div`
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, min-content);
+    grid-auto-flow: column;
+    grid-column-gap: 8px;
+    grid-row-gap: 20px;
+
+    span {
+      font-size: 12px;
+      line-height: 16px;
+      display: inline-block;
+      color: #2F3438;
+      white-space: nowrap;
+      cursor: pointer;
+      touch-action: manipulation;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  `;
+
+  const Details = styled.div`
+    font-size: 10px;
+    line-height: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    color: #828C94;
+
+    @media (max-width: 1024px) {
+      grid-column-start: 1;
+      grid-column-end: 6;
+    }
+  `;
+
+  const CompanyInfo = styled.div`
+    overflow: hidden;
+    margin-left: -9px;
+  `;
+
+  const Individual = styled.div`
+    font-size: 12px;
+    line-height: 20px;
+    display: inline-block;
+    white-space: nowrap;
+
+    span {
+      margin: 0px 4px;
+    }
+
+    address {
+      display: inline-block;
+      font-style: normal;
+      font-weight: 400;
+    }
+
+    a {
+      margin: 0px 4px;
+      cursor: pointer;
+      touch-action: manipulation;
+    }
+  `;
+
+  const CheckBusinessInfo = styled.a`
+    font-weight:700;
+    color: rgb(130, 140, 148);
+    cursor: pointer;
+    touch-action: manipulation;
+  `;
+
+  const ConfirmationOfService = styled.a`
+    font-weight: 700;
+    color:#828C94;
+    cursor: pointer;
+    touch-action: manipulation;
+  `;
+
+  const CertificationMark = styled.div`
+    display: grid;
+    grid-column-gap: 6px;
+    grid-template-columns: max-content minmax(min-content, 116px) minmax(min-content, 116px);
+  `;
+
+  const IconBox = styled.div`
+    display: flex;
+    height: 40px;
+    padding: 0 6px;
+    gap: 6px;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+
+    img {
+      width: 32px;
+      aspect-ratio: auto 32 / 32;
+      height: 32px;
+      border: none;
+      overflow-clip-margin: content-box;
+      overflow: clip;
+    }
+
+    a {
+      cursor: pointer;
+      touch-action: manipulation;
+      color: inherit;
+      text-decoration: none;
+    }
+  `;
+
+  const IsmsText = styled.div`
+    font-size: 10px;
+    line-height: 14px;
+    color: #828C94;
+  `;
+
+  const SNSIcon = styled.div`
+    a {
+      display: inline-block;
+      margin-right: 12px;
+      cursor: pointer;
+      touch-action: manipulation;
+      color: inherit;
+      text-decoration: none;
+    }
+  `
 
   export default Footer;
