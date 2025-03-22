@@ -3,7 +3,12 @@ import {faChevronLeft} from '@fortawesome/free-solid-svg-icons'
 
 import styled from "styled-components";
 
-const PrevArrow = ({ onClick }) => {
+const PrevArrow = (props) => {
+  const {onClick, currentSlide} = props;
+
+  // 첫 번째 슬라이드에서는 숨기기
+  if (currentSlide === 0) return null;
+
     return (
     <PrevArrowButton>
         <button
