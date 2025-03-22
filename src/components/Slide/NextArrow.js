@@ -3,7 +3,13 @@ import {faChevronRight} from '@fortawesome/free-solid-svg-icons';
 
 import styled from "styled-components";
 
-const NextArrow = ({ onClick }) => {
+const NextArrow = ( props ) => {
+  const {onClick, currentSlide, slideCount, slidesToScroll} = props;
+
+  // 마지막 슬라이드에서 숨기기
+  const isLastPage = currentSlide + slidesToScroll >= slideCount;
+  if (isLastPage) return null;
+
     return (
     <NextArrowButton>
         <button
