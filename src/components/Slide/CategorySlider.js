@@ -1,9 +1,11 @@
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faChevronRight} from '@fortawesome/free-solid-svg-icons'
-import {faChevronLeft} from '@fortawesome/free-solid-svg-icons'
+
+import PrevArrow from './PrevArrow';
+import NextArrow from './NextArrow';
+
+import styled from "styled-components";
 
 import { useState, useRef } from 'react';
 
@@ -20,252 +22,80 @@ function Categroy_Slider() {
       slidesToShow: 13,
       slidesToScroll: 13,
       afterChange: (current) => setCurrentSlide(current),
+      prevArrow: <PrevArrow/>,
+      nextArrow: <NextArrow/>
     };
   
+    const categories = [
+      { label: '크리스마스', img: '/Category/크리스마스.avif' },
+      { label: '가구', img: '/Category/가구.avif' },
+      { label: '패브릭', img: '/Category/패브릭.avif' },
+      { label: '가전.디지털', img: '/Category/가전,디지털.avif' },
+      { label: '주방용품', img: '/Category/주방용품.avif' },
+      { label: '식품', img: '/Category/식품.avif' },
+      { label: '데코,식물', img: '/Category/데코,식물.avif' },
+      { label: '조명', img: '/Category/조명.avif' },
+      { label: '수납,정리', img: '/Category/수납,정리.avif' },
+      { label: '생활용품', img: '/Category/생활용품.avif' },
+      { label: '생필품', img: '/Category/생필품.avif' },
+      { label: '유아, 아동', img: '/Category/유아,아동.avif' },
+      { label: '반려동물', img: '/Category/반려동물.avif' },
+      { label: '캠핑,레저', img: '/Category/캠핑,레저.avif' },
+      { label: '공구,DIY', img: '/Category/공구,DIY.avif' },
+      { label: '인테리어시공', img: '/Category/인테리어시공.webp' },
+      { label: '렌탈,구독', img: '/Category/렌탈,구독.avif' },
+      { label: '장보기', img: '/Category/장보기.avif' },
+      { label: '혼수,신혼', img: '/Category/혼수,신혼.avif' }
+    ]
     return (
-      <div className='Category_C_1_1'>
-      <Slider ref={sliderRef} {...settings}>
-        <div className='Category_C_1_1_ul_li'>
-                        <a>
-                          <div className='Category_C_1_1_ul_li_a_1'>
-                            <img src='Category\크리스마스.avif'></img>
-                          </div>
-                          <span>크리스마스</span>
-                        </a>
-                      </div>
-                   
-                      <div className='Category_C_1_1_ul_li'>
-                        <a>
-                          <div className='Category_C_1_1_ul_li_a_1'>
-                            <img src='Category\가구.avif'></img>
-                          </div>
-                          <span>가구</span>
-                        </a>
-                      </div>
-                    
-                      <div className='Category_C_1_1_ul_li'>
-                        <a>
-                          <div className='Category_C_1_1_ul_li_a_1'>
-                            <img src='Category\패브릭.avif'></img>
-                          </div>
-                          <span>패브릭</span>
-                        </a>
-                      </div>
-                    
-                      <div className='Category_C_1_1_ul_li'>
-                        <a>
-                          <div className='Category_C_1_1_ul_li_a_1'>
-                            <img src='Category\가전,디지털.avif'></img>
-                          </div>
-                          <span>가전.디지털</span>
-                        </a>
-                      </div>
-                    
-                      <div className='Category_C_1_1_ul_li'>
-                        <a>
-                          <div className='Category_C_1_1_ul_li_a_1'>
-                            <img src='Category\주방용품.avif'></img>
-                          </div>
-                          <span>주방용품</span>
-                        </a>
-                      </div>
-                    
-                      <div className='Category_C_1_1_ul_li'>
-                        <a>
-                          <div className='Category_C_1_1_ul_li_a_1'>
-                            <img src='Category\식품.avif'></img>
-                          </div>
-                          <span>식품</span>
-                        </a>
-                      </div>
-                   
-                      <div className='Category_C_1_1_ul_li'>
-                        <a>
-                          <div className='Category_C_1_1_ul_li_a_1'>
-                            <img src='Category\데코,식물.avif'></img>
-                          </div>
-                          <span>데코,식물</span>
-                        </a>
-                      </div>
-                 
-                      <div className='Category_C_1_1_ul_li'>
-                        <a>
-                          <div className='Category_C_1_1_ul_li_a_1'>
-                            <img src='Category\조명.avif'></img>
-                          </div>
-                          <span>조명</span>
-                        </a>
-                      </div>
-                  
-                      <div className='Category_C_1_1_ul_li'>
-                        <a>
-                          <div className='Category_C_1_1_ul_li_a_1'>
-                            <img src='Category\수납,정리.avif'></img>
-                          </div>
-                          <span>수납,정리</span>
-                        </a>
-                      </div>
-                    
-                      <div className='Category_C_1_1_ul_li'>
-                        <a>
-                          <div className='Category_C_1_1_ul_li_a_1'>
-                            <img src='Category\생활용품.avif'></img>
-                          </div>
-                          <span>생활용품</span>
-                        </a>
-                      </div>
-                  
-                      <div className='Category_C_1_1_ul_li'>
-                        <a>
-                          <div className='Category_C_1_1_ul_li_a_1'>
-                            <img src='Category\생필품.avif'></img>
-                          </div>
-                          <span>생필품</span>
-                        </a>
-                      </div>
-                  
-                      <div className='Category_C_1_1_ul_li'>
-                        <a>
-                          <div className='Category_C_1_1_ul_li_a_1'>
-                            <img src='Category\유아,아동.avif'></img>
-                          </div>
-                          <span>유아, 아동</span>
-                        </a>
-                      </div>
-                   
-                      <div className='Category_C_1_1_ul_li'>
-                        <a>
-                          <div className='Category_C_1_1_ul_li_a_1'>
-                            <img src='Category\반려동물.avif'></img>
-                          </div>
-                          <span>반려동물</span>
-                        </a>
-                      </div>
-                    
-                      <div className='Category_C_1_1_ul_li'>
-                        <a>
-                          <div className='Category_C_1_1_ul_li_a_1'>
-                            <img src='Category\캠핑,레저.avif'></img>
-                          </div>
-                          <span>캠핑,레저</span>
-                        </a>
-                      </div>
-                    
-                      <div className='Category_C_1_1_ul_li'>
-                        <a>
-                          <div className='Category_C_1_1_ul_li_a_1'>
-                            <img src='Category\공구,DIY.avif'></img>
-                          </div>
-                          <span>공구,DIY</span>
-                        </a>
-                      </div>
-                    
-                      <div className='Category_C_1_1_ul_li'>
-                        <a>
-                          <div className='Category_C_1_1_ul_li_a_1'>
-                            <img src='Category\인테리어시공.webp'></img>
-                          </div>
-                          <span>인테리어시공</span>
-                        </a>
-                      </div>
-                    
-                      <div className='Category_C_1_1_ul_li'>
-                        <a>
-                          <div className='Category_C_1_1_ul_li_a_1'>
-                            <img src='Category\렌탈,구독.avif'></img>
-                          </div>
-                          <span>렌탈,구독</span>
-                        </a>
-                      </div>
-                   
-                      <div className='Category_C_1_1_ul_li'>
-                        <a>
-                          <div className='Category_C_1_1_ul_li_a_1'>
-                            <img src='Category\장보기.avif'></img>
-                          </div>
-                          <span>장보기</span>
-                        </a>
-                      </div>
-                   
-                      <div className='Category_C_1_1_ul_li'>
-                        <a>
-                          <div className='Category_C_1_1_ul_li_a_1'>
-                            <img src='Category\혼수,신혼.avif'></img>
-                          </div>
-                          <span>혼수,신혼</span>
-                        </a>
-                      </div>
-      </Slider>
-      {currentSlide > 0 && (
-        <div  className='PrevArrow2_button'>
-        <button className='PrevArrow2_button_b'
-          onClick={() => sliderRef.current.slickPrev()}
-          style={{
-            margin: 0,
-            border: "none",
-            background: "none",
-            font: "inherit",
-            fontSize: 16,
-            lineHeight: 20,
-            fontWeight: 700,
-            boxSizing: "border-box",
-            textAlign: "center",
-            color: "rgb(255, 255, 255)",
-            padding: 0,
-            width: 48,
-            height: 48,
-            display: "flex",
-            alignItems: "center",
-            webkitboxpack: "center",
-            justifyContent: "center",
-            borderRadius: 24,
-            backgroundColor: "rgb(255, 255, 255)",
-            boxShadow: "0 2px 5px rgba(63, 71, 77, 0.15)",
-            cursor: "pointer",
-            touchAction: "manipulation",
-          }}
-          type='button'
-        >
-        <span><FontAwesomeIcon icon={faChevronLeft} /></span>
-        </button>
-        </div>
-      )}
-      {currentSlide === 0 && (
-        <div  className='NextArrow_button'>
-        <button 
-          onClick={() => sliderRef.current.slickNext()}
-          style={{
-            margin: 0,
-            border: "none",
-            background: "none",
-            font: "inherit",
-            fontSize: 16,
-            lineHeight: 20,
-            fontWeight: 700,
-            boxSizing: "border-box",
-            textAlign: "center",
-            color: "rgb(255, 255, 255)",
-            padding: 0,
-            width: 48,
-            height: 48,
-            display: "flex",
-            alignItems: "center",
-            webkitboxpack: "center",
-            justifyContent: "center",
-            borderRadius: 24,
-            backgroundColor: "rgb(255, 255, 255)",
-            boxShadow: "0 2px 5px rgba(63, 71, 77, 0.15)",
-            cursor: "pointer",
-            touchAction: "manipulation",
-          }}
-          type='button'
-        >
-        <span><FontAwesomeIcon icon={faChevronRight} /></span>
-        </button>
-        </div>
-      )}
-      </div>
+      <SliderContainer>
+      <StyledSlider ref={sliderRef} {...settings}>
+        {categories.map(({ label, img }, idx ) => (
+          <Imageitem key = {label}>
+            <label>
+              <img src={img} alt={label}/>
+              <span>{label}</span>
+            </label>
+          </Imageitem>
+        ))}
+        
+      </StyledSlider>
+      
+      </SliderContainer>
     )
   }
 
+const SliderContainer = styled.div`
+  position: relative;
+  z-index: 0;
+`;
+
+const StyledSlider = styled(Slider)`
+  height: 98px;
+  margin-left: 0;
+`;
+
+const Imageitem = styled.div`
+  width: 72px;
+  cursor: pointer;
+  touch-action: manipulation;
+  color: inherit;
+  text-decoration: none;
+
+  img {
+    width: 100%;
+    height: 72px;
+    object-fit: contain;
+  }
+
+  span {
+    display: block;
+    margin-top: 8px;
+    font-size: 14px;
+    line-height: 18px;
+    color: rgb(47, 52, 56);
+    text-align: center;
+    white-space: nowrap;
+  }
+`
 export default Categroy_Slider;
