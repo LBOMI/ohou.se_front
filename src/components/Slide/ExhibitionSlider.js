@@ -6,6 +6,11 @@ import {faChevronRight} from '@fortawesome/free-solid-svg-icons'
 import {faChevronLeft} from '@fortawesome/free-solid-svg-icons'
 import {faArrowRight} from '@fortawesome/free-solid-svg-icons'
 
+import PrevArrow from './PrevArrow';
+import NextArrow from './NextArrow';
+
+import styled from "styled-components";
+
 import { useState, useRef } from 'react';
 
 
@@ -21,29 +26,39 @@ function Exhibition_Slider() {
       slidesToShow: 4,
       slidesToScroll: 4,
       afterChange: (current) => setCurrentSlide(current),
+      prevArrow: <PrevArrow/>,
+      nextArrow: <NextArrow/>
     };
+
+    const categories = [
+      { img: 'exhibition/기획전_1.avif', p1: '전시, 반품, 스크래치 특템의 기회!', p2: '빠른 품절! 리퍼마켓 ~82%'},
+      { img: 'exhibition/기획전_2.avif', p1: '전상품 무료배송', p2: '매일 새로운 장보기 핫딜! 오마트'},
+      { img: 'exhibition/기획전_3.avif', p1: '오늘의집 Only'},
+      { img: 'exhibition/기획전_4.avif', p1: '배송 걱정없이 원하는 날 한번에 설치해요!', p2: '오늘의집 배송 꿀조합 가구 추천'},
+      { img: 'exhibition/기획전_2.avif', p1: '전상품 무료배송', p2: '매일 새로운 장보기 핫딜! 오마트'}
+
+    ]
   
     return (
-      <div className='Exhibition_c1_1'>
-        <Slider ref={sliderRef} {...settings} >
+      <SliderContainer>
+        <StyledSlider ref={sliderRef} {...settings} >
        
-        <div className='Exhibition_c1_1_1'>
-                        <div className='Exhibition_c1_1_1_1' style={{cursor:"pointer"}}>
-                          <div className='Exhibition_c1_1_1_174' style={{ marginRight: 20 }}>
-                          <img src='exhibition\기획전_1.avif'></img>
-                          <div className='Exhibition_c1_1_1_1_1'>
-                            <div className='Exhibition_c1_1_1_1_1_1'></div>
-                          </div>
-                          </div>
-                        <div className='Exhibition_c1_1_1_2' style={{cursor:"pointer"}}>
-                          <p className='Exhibition_c1_1_1_2_p1'>전시, 반품, 스크래치 특템의 기회!</p>
-                          <p className='Exhibition_c1_1_1_2_p2'>빠른 품절! 리퍼마켓 ~82%</p>
-                        </div>
-                        <a className='Exhibition_c1_1_1_a'></a>
-                      </div>
-                      </div>
+        
+          {categories.map(({ img, p1, p2 }, idx ) => (
+            <Container key = {img}>
+              <Image>
+                <img src={img} />
+              </Image>
+              <Text>
+                <P1>{p1}</P1>
+                <P2>{p2}</P2>
+              </Text>
+
+            </Container>
+          ))}
+                        
                     
-                    <div className='Exhibition_c1_1_2'>
+                    {/* <div className='Exhibition_c1_1_2'>
                         <div className='Exhibition_c1_1_2_1' style={{cursor:"pointer"}}>
                         <div className='Exhibition_c1_1_1_174' style={{ marginRight: 20 }}>
                           <img src='exhibition\기획전_2.avif' ></img>
@@ -89,7 +104,7 @@ function Exhibition_Slider() {
                           <p className='Exhibition_c1_1_4_2_p2'>오늘의집 배송 꿀조합 가구 추천</p>
                         </div>
                         <a></a>
-                      </div>
+                      </div> */}
                       <div>
                       <div className='Exhibition_c1_1_5'>
                       <a>
@@ -102,7 +117,7 @@ function Exhibition_Slider() {
                       </div>
   
                     
-        </Slider>
+        </StyledSlider>
         {currentSlide > 0 && (
         <div  className='PrevArrow2_button'>
         <button className='PrevArrow2_button_b'
@@ -171,9 +186,75 @@ function Exhibition_Slider() {
         </button>
         </div>
       )}
-      </div>
+      </SliderContainer>
     )
   }
 
+  const SliderContainer = styled.div`
+    position: relative;
+    z-index: 0;
+  `;
+
+  const StyledSlider = styled(Slider)`
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    list-style: none;
+  `;
+
+  const Container = styled.div`
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    padding: 0;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    width: calc((100% - 60px) / 4);
+  `;
+
+  const Image = styled.div`
+    position: relative;
+    border-radius: 4px;
+    margin-right: 20px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      top: 0px;
+      left: 0px;
+      transition: transform 0.2s ease 0s;
+    }
+  `;
+
+  const Text = styled.div`
+    margin-top: 10px;
+    min-width: 0px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400;
+    color: rgb(47, 52, 56);
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    cursor: pointer;
+  `;
+
+  const P1 = styled.p`
+    overflow: hidden;
+    font-size: 14px;
+    line-height: 20px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 0;
+  `;
+
+  const P2 = styled.p`
+    margin-top: 2px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    margin: 0;
+  `
 export default Exhibition_Slider;
   
