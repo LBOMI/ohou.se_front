@@ -1,14 +1,24 @@
+import React, { useState } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faPlus} from '@fortawesome/free-solid-svg-icons'
 
-import { useState } from 'react';
 import styled from "styled-components";
 
 import PrevArrow from './PrevArrow';
 import NextArrow from './NextArrow';
+
+const images = [
+  'AD/add_mobile_1.avif',
+  'AD/add_mobile_2.avif',
+  'AD/add_mobile_3.avif',
+  'AD/add_mobile_4.avif',
+  'AD/add_mobile_5.avif',
+  'AD/add_mobile_6.avif'
+]
 
 function SimpleSlider2() {
     const [currentIndex, setCurrentIndex ] = useState(0);
@@ -34,28 +44,15 @@ function SimpleSlider2() {
           onMouseLeave={() => setIsHovered(false)}
       >
                   <StyledSlider {...settings}>
-                    <div>
-                      <img src='AD\add_mobile_1.avif'></img>
-                    </div>
-                    <div>
-                    <img src='AD\add_mobile_2.avif'></img>
-                    </div>
-                    <div>
-                    <img src='AD\add_mobile_3.avif'></img>
-                    </div>
-                    <div>
-                    <img src='AD\add_mobile_4.avif'></img>
-                    </div>
-                    <div>
-                    <img src='AD\add_mobile_5.avif'></img>
-                    </div>
-                    <div>
-                    <img src='AD\add_mobile_6.avif'></img>
-                    </div>
+                    { images.map(( src, idx ) => (
+                      <div key={idx}>
+                        <img src={src} alt={`광고 이미지 ${idx + 1}`}/>
+                      </div>
+                    ))}
                   </StyledSlider>
                   
                   <IndexIndicator>
-                    {currentIndex + 1}/6 
+                    {currentIndex + 1} / {images.length}
                       <FontAwesomeIcon icon={faPlus} />
                   </IndexIndicator>
                   </Container>
@@ -72,23 +69,19 @@ function SimpleSlider2() {
   `
 
   const StyledSlider = styled(Slider)`
-    position: absolute;
+    position: relative;
     border-radius: 13px;
 
     margin: 0 auto;
     width: 100%;
-    // min-height: 100px;
    height: 100%;
 
     .slick-list {
       width: 100%;
-      // min-height: 100px;
-  //  height: auto;
       border-radius: 4px;
 
       img {
         width: 100%;
-        // height: auto;
 
       &:hover {
         transform: scale(1.05);
@@ -98,28 +91,28 @@ function SimpleSlider2() {
   `;
 
   const IndexIndicator = styled.div`
-  //  position: relative;
-    
-    font-size: 13px;
-    height: 25px;
-    border-radius: 13px;
-    background-color: rgba(33, 38, 41, 0.5);
-    font-weight: 700;
-    display: inline-flex;
-    align-items: center;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    word-wrap: normal;
-    line-height: 0;
-    overflow: hidden;
-    max-width: 100%;
-    color: #ffffff;
-    box-sizing: border-box;
-    padding: 4px 8px 4px 10px;
-    cursor: pointer;
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+
+  font-size: 13px;
+  font-weight: 700;
+  color: #ffffff;
+
+  background-color: rgba(33, 38, 41, 0.6);
+  padding: 4px 10px;
+  border-radius: 13px;
+
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+  cursor: pointer;
+
+  svg {
+    margin-left: 6px;
+    font-size: 12px;
+  }
 `;
 
   export default SimpleSlider2;
