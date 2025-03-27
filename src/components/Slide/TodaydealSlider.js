@@ -4,8 +4,6 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faChevronLeft} from '@fortawesome/free-solid-svg-icons'
-import {faChevronRight} from '@fortawesome/free-solid-svg-icons'
 import {faArrowRight} from '@fortawesome/free-solid-svg-icons'
 
 import styled from "styled-components";
@@ -77,15 +75,6 @@ function Todaydeal_Slider() {
         review: '리뷰 626',
         isFreeShipping: true},
 
-      { img: 'Todaydeal/Todaydeal_4.avif', 
-        name: '알텐바흐', 
-        detail: '1/3일! 단하루 32% 홈쇼핑 완판! 알텐바흐 디펜더스 주방용품 모음전', 
-        discount: '60%', 
-        price: '73,500 외', 
-        star: '4.7', 
-        review: '리뷰 626',
-        isFreeShipping: true},
-
       { img: 'Todaydeal/Todaydeal_5.avif', 
         name: '애경', 
         detail: '리큐/2080/르샤트라 세탁세제/유연제 등 할인 모음', 
@@ -103,12 +92,25 @@ function Todaydeal_Slider() {
         star: '4.6', 
         review: '리뷰 92,238',
         isFreeShipping: true},
+      
+      { isMore: true }
     ]
     return (
       <SliderContainer>
         <StyledSlider {...settings}>
           {categories.map((item, idx) => (
-            <Contents key={idx}>
+            item.isMore ? (
+        
+              <React.Fragment key = {`more-${idx}`}>
+              <MoreContent key = {`more-${idx}`}>
+                    <ArrowRight>
+                      <span><FontAwesomeIcon icon={faArrowRight} /></span>
+                    </ArrowRight>
+                    <MoreText>더보기</MoreText>
+              </MoreContent>
+              </React.Fragment>
+            ) : (
+            <Contents key={`${item.name}-${idx}`}>
                           
                           <Images>
               
@@ -142,31 +144,21 @@ function Todaydeal_Slider() {
 
                               {item.istodaydepart && 
                               <TodayDepartImg>
-                                <img src='Todaydeal\오늘출발.png'/>
+                                <img src='Todaydeal/오늘출발.png'/>
                               </TodayDepartImg>}
 
                               {item.isdeadline && 
                               <Deadline>평일 21:00까지 결제시</Deadline>}
 
                               {item.isFreeShipping && <FreeShipping/>}
-                              {item.SpecialPrice && <SpecialPrice/>}
-                              {item.PaymentDiscountCard && <PaymentDiscountCard/>}
+                              {item.isSpecialPrice && <SpecialPrice/>}
+                              {item.isDiscountCard && <PaymentDiscountCard/>}
                           </Text>
-                      </Contents>
+                      </Contents>)
           ))}
           
                     
-                     
-                    <div>
-                      <div className='Todaydeal_C_last'>
-                          <a>
-                            <div className='Todaydeal_C_last_1'>
-                              <span><FontAwesomeIcon icon={faArrowRight} /></span>
-                            </div>
-                            <div className='Todaydeal_C_last_2'>더보기</div>
-                          </a>
-                      </div>
-                      </div>
+             
                 
             
                       
@@ -182,32 +174,33 @@ function Todaydeal_Slider() {
   `;
 
   const StyledSlider = styled(Slider)`
-    position: relative;
-    margin-left: 0;
     width: 100%;
-    height: 100%;
-    display: flex;
-    padding: 0px;
 
     .slick-slide {
-      margin-right: 8px;
+      padding: 0 8px;
+      box-sizing: border-box;
+      
     }
 
     .slick-list {
       margin: 0 -8px;
+      overflow: hidden;
     }
   `;
 
   const Contents = styled.div`
-    padding: 0 10px 15px;
+    // padding: 0 10px 15px;
     display: flex;
     flex-direction: column;
+    cursor: pointer;
   `;
 
   const Images = styled.div`
     position: relative;
     width: 100%;
     padding-top: 100%; 
+    overflow: hidden;
+    border-radius: 4px;
 
     img {
       position: absolute;
@@ -216,6 +209,7 @@ function Todaydeal_Slider() {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      border-radius: inherit;
       transition: transform 0.2s ease 0s; 
 
       &:hover {
@@ -233,8 +227,8 @@ function Todaydeal_Slider() {
     border-radius: 4px;
     top: 12px; /*media 768*/
     left: 12px; /*media 768*/
-    font-size: 13px; /*media 768*/
-    line-height: 15px; /*media 768*/
+    font-size: 6.5px; /*media 768*/
+    line-height: 5px; /*media 768*/
     width: 91px;
     height: 23px;
     /* pointer-events: none;  */
@@ -317,4 +311,40 @@ function Todaydeal_Slider() {
     color: rgb(99, 145, 230);
   `;
 
+  const MoreContent = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    justify-content: center;
+    margin: 0px 20px 0px 0px;
+    padding: 0px;
+    flex-shrink: 0;
+    height: 370px;
+    cursor: pointer;
+  `;
+
+  const ArrowRight = styled.div `
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: rgb(234, 237, 239);
+    margin-bottom: 6px;
+    position: relative;
+
+    span {
+      display: inline-block;
+      font-size: 18px;
+      line-height: 1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  `;
+
+  const MoreText = styled.div`
+    font-size: 14px;
+    line-height: 20px;
+  `
 export default Todaydeal_Slider;
